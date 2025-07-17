@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}api/auth`;
+  const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api/auth`;
 
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
