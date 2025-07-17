@@ -49,6 +49,9 @@ const Login = () => {
         </div>
         <button type="submit" style={styles.button}>Login</button>
       </form>
+     <p style={styles.linkText}>
+        <Link to="/forgot-password" style={styles.link}>Forgot Password?</Link> {/* New link */}
+      </p>
       <p style={styles.linkText}>
         Don't have an account? <Link to="/register" style={styles.link}>Register here</Link>
       </p>

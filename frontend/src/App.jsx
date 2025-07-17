@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import ForgotPassword from './pages/ForgotPassword'; // Import new page
+import ResetPassword from './pages/ResetPassword';   // Import new page
 import { AuthProvider, useAuth } from './context/AuthContext'; // Import AuthProvider and useAuth
 import ProtectedRoute from './components/ProtectedRoute'; // Import ProtectedRoute
 
@@ -50,6 +52,8 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} /> {/* New route */}
+        <Route path="/reset-password/:token" element={<ResetPassword />} /> {/* New route with token */}
 
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
