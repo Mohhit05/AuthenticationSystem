@@ -8,8 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
-// Middleware
-app.use(cors()); // Enable CORS for all routes
+// Middleware for CORS
+app.use(cors({
+  origin: "https://authentication-system-nu-seven.vercel.app",
+  credentials: true,
+}));
+
 app.use(express.json()); // Body parser for JSON requests
 
 // MongoDB Connection
